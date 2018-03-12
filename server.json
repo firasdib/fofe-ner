@@ -1,0 +1,22 @@
+{
+  "port": "9999",
+  "languages": [
+    {
+      "language": "en",
+      "pipelines": [
+        {
+          "name": "default",
+          "model": "/Users/firasdib/exjobb/models/tac_en_combo.zip",
+          "config": "./config.json",
+          "mode": "DOCFORIA_TAC"
+        },
+        {
+          "name": "conll",
+          "model": "/Users/firasdib/exjobb/models/run22.zip",
+          "config": "./config.json",
+          "mode": "DOCFORIA_CONLL"
+        }
+      ]
+    }
+  ]
+}

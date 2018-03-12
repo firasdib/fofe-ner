@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{ISO8601} [%thread] %-5level %logger{36} %m%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- Tests run on modern PCs show that buffering related property -->
+        <!-- "ImmediateFlush" has negligible impact and will be ignored.  -->
+        <File>./info.log</File>
+        <Append>false</Append>
+        <encoder>
+            <pattern>%-30(%d{ISO8601} [%thread] %-5level) %logger{36} %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>debug</level>
+        </filter>
+    </appender>
+    <logger name="org.canova" level="INFO"/>
+    <logger name="play" level="DEBUG"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="se.lth" level="DEBUG"/>
+    <logger name="org.cleartk" level="OFF"/>
+    <logger name="opennlp.uima.util" level="OFF"/>
+    <logger name="org.apache.uima" level="OFF"/>
+    <logger name="org.datavec" level="INFO"/>
+    <logger name="org.deeplearning4j" level="INFO"/>
+    <logger name="org.nd4j" level="INFO"/>
+    <root level="ERROR">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

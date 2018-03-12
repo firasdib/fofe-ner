@@ -1,0 +1,10 @@
+entitylinker.ipr
+entitylinker.iws
+info.log
+src/main/resources/META-INF
+/data/
+/models/
+/target/
+conll.output
+entitylinker.iml
+.idea

@@ -1,0 +1,57 @@
+{
+  "chineseMode": "true",
+
+  "uiServerPort": "9002",
+  "printFrequency": "1",
+
+  "useParallelWrapper": "false",
+  "numberOfWorkers": "2",
+
+  "maxNGramSize": "7",
+  "nGramThreshold": "0.5",
+  "pruningAlgorithm": "highest",
+
+  "overlapRate": "0.60",
+  "disjointRate": "0.30",
+  "positiveRate": "0.1",
+
+  "epochCount": "128",
+  "batchSize": "512",
+  "neuronCount": "512",
+
+  "learningRate": "0.1024",
+  "useLRDecay": "true",
+  "useDropoutDecay": "false",
+  "optimizer": "adam",
+  "l2reg": "0.0",
+  "dropout": "0.1024",
+
+  "momentum": "0.9",
+  "adamMeanDecay": "0.9",
+  "adamVarDecay": "0.999",
+  "adamEpsilon": "1E-8",
+
+  "wordAlpha": "0.5",
+  "charAlpha": "0.8",
+
+  "word2vecModelCS": "/Users/firasdib/exjobb/word2vec/en-256d-gigaword-pad-hs-neg-10-win-10-skipgram.txt",
+  "word2vecModelCIS": "/Users/firasdib/exjobb/word2vec/en-256d-gigaword-lcase-pad-hs-neg-10-win-10-skipgram.txt",
+  "unknownWord": "{UNK}",
+  "unknownWordLC": "{unk}",
+  "bosWord": "{BOS}",
+  "eosWord": "{EOS}",
+  "modelFolder": "/Users/firasdib/exjobb/models/",
+
+  "vocabLimit": "100000",
+  "dimWordProjection": "256",
+  "dimCharProjection": "64",
+  "charDimensions": "128",
+  "kernelSizeStart": "2",
+  "kernelSizeEnd": "9",
+
+  "useInitialCharFOFEFeatures": "true",
+  "useCharFOFEFeatures": "true",
+  "useCharCNNFeatures": "false",
+  "useWordFOFEFeaturesCIS": "true",
+  "useWordFOFEFeaturesCS": "true"
+}
